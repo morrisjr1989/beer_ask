@@ -18,6 +18,8 @@ def start_skill():
 @ask.intent('CityState')
 def city_state(city, state):
 
+    #TODO create dialog model to investigate data from LocationQuery
+
     breweries = QueryForBeer(city, state).LocationQuery()
     response  = 'For {}, {} I have found {} breweries'.format(city, state, len(breweries))
 
